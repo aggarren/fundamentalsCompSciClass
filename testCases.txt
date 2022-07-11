@@ -1,0 +1,214 @@
+Test Cases:
+============================================================================================
+test1
+
+INPUT:
+IADX IAD UA 100
+IADX CHLT UA 440
+CHLT ROA DL 120
+IADX IAD DL 75
+IAD CHLT UA 200
+IADX ROA DL 500
+CHLT ROA UA 125
+IAD ROA UA 450
+IAD ROA JB 500
+
+OUTPUT:
+CHLT: ROA (120/0), IAD (200/0), IADX (275/1)
+IAD: IADX (75/0), CHLT (200/0), ROA (320/1)
+IADX: IAD (75/0), CHLT (275/1), ROA (395/2)
+ROA: CHLT (120/0), IAD (320/1), IADX (395/2)
+
+Airline Specific:
+================
+DL
+CHLT: ROA (120/0)
+IDAX: ROA (500/0), IAD (75/0)
+----------------
+JB
+IAD: ROA (500/0)
+----------------
+UA
+CHLT: ROA (125/0)
+IAD: CHLT (200/0), ROA (325/1)
+IADX: CHLT (440/0), IAD (100/0)
+-----------------
+
+EXPLANATION:
+This tests for:
+- Airport names with same first chars
+- For no specified airline: cases of several layovers being cheapest
+- For specified airline: One layover with the rest single stop flights
+- Use of lexicographic
+
+=============================================================================================
+test2
+
+INPUT:
+IADX ROA UA 500
+IADX IAD UA 100
+CHLT IADX DL 440
+IADX ROA DL 120
+IAD CHLT UA 75
+IADX IAD DL 200
+CHLT ROA UA 500
+IAD ROA UA 125
+IAD ROA JB 450
+
+OUTPUT:
+CHLT: IAD (540/1), IADX (440/0), ROA (500/0)
+IAD: CHLT (75/0), ROA (125/0)
+IADX: CHLT (175/1), IAD(100/0), ROA (120/0)
+ROA:
+
+Airline Specific:
+================
+DL
+CHLT: IAD (200/1), IADX (440/2), ROA (120/2)
+IAD:
+IADX:
+ROA:
+----------------
+JB
+CHLT:
+IAD: ROA (450/0)
+IADX:
+ROA:
+----------------
+UA
+CHLT: ROA (500/0)
+IAD: ROA (125/0)
+IADX: IAD (100/0), ROA (500/0)
+ROA:
+-----------------
+
+EXPLANATION:
+This tests for:
+- Airport names with same first chars
+- For no specified airline: cases of several layovers being cheapest
+  -Case of an airport not having any flights to anywhere (only a destination)
+- For specified airline: cases of no options for an airport to be "from"
+- Not all airports going to all other airports
+- Use of lexicographic
+
+========================================================================================
+test3
+
+INPUT:
+IADX ROA UA 500
+IADX IAD UA 100
+
+OUTPUT:
+IAD:
+IADX: IAD (100/0), ROA (500/0)
+ROA:
+
+Airline Specific:
+================
+UA
+IADX: IAD (100/0), ROA (500/0)
+
+EXPLANATION:
+This tests for:
+- Airport names with same first chars
+- For no specified airline: NO cases of several layovers being cheapest
+  -Case of airports not having any flights to anywhere (only a destination)
+- For specified airline: cases of all options for an airport to be "from"
+- Few options for flights
+- Use of lexicographic
+
+================================================================================
+test4
+
+INPUT:
+CHLT ROA UA 500
+
+OUTPUT:
+CHLT: ROA (500/0)
+ROA:
+
+Airline Specific:
+================
+UA
+CHLT: ROA (500/0)
+----------------
+EXPLANATION:
+This tests for:
+- For no specified airline: NO cases of several layovers being cheapest
+  -Case of airports not having any flights to anywhere (only a destination)
+- One flight option
+- No use of lexicographic
+
+================================================================================
+test5
+
+INPUT:
+IAD CHLT JB 100
+IADX CHLT UA 440
+IADX ROA UA 120
+CHLT IAD DL 75
+IADX CHLT JB 200
+IAD ROA UA 500
+IADX ROA DL 125
+CHLT ROA UA 450
+IAD ROA JB 500
+
+OUTPUT:
+CHLT: IAD (75/0), ROA (450/0)
+IAD: CHLT (100/0), ROA (500/0)
+IADX: CHLT (200/0)
+ROA:
+
+Airline Specific:
+================
+DL
+CHLT: IAD (75/0)
+IAD:
+IADX: ROA (125/0)
+ROA:
+----------------
+JB
+CHLT:
+IAD: CHLT (100/0), ROA (500/0)
+IADX: CHLT (200/0)
+ROA:
+----------------
+UA
+CHLT: ROA (450/0)
+IAD: ROA (500/0)
+IADX: CHLT (440/0), ROA (120/0)
+ROA:
+-----------------
+
+EXPLANATION:
+This tests for:
+- Airport names with same first chars
+- For no specified airline: NO cases of several layovers being cheapest
+  -Case of airports not having any flights to anywhere (only a destination)
+- Use of lexicographic
+
+
+================================================================================
+test6
+
+INPUT:
+IAD CHLT UA 1000
+IAD IADX UA 100
+IADX CHLT UA 200
+
+OUTPUT:
+CHLT:	
+IAD: CHLT (300/1), IADX (100/0)
+IADX: CHLT (200/0)
+
+Airline Specific:
+================
+UA
+CHLT:	
+IAD: CHLT (300/1), IADX (100/0)
+IADX: CHLT (200/0)
+
+EXPLANATION:
+This tests for:
+-layover flight being cheaper than a direct flight
+           
