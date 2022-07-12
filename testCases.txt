@@ -1,0 +1,22 @@
+Test cases:
+
+Case1:
+Input: word hello goodbye
+Output:
+Explanation: tests for no duplicates
+
+Case2:
+Input: no way this is easy points
+Output:
+Explanation: tests for no duplicates
+
+Case3:
+Input: eloise is the best kitty ever the best kitty ever
+Output: the best kitty ever
+Explanation: tests for several duplicates
+
+Case4:
+Input: hey hello hello hi
+Output: hello
+Explanation: tests for one duplicate
+     
