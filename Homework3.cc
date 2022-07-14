@@ -157,4 +157,4 @@ void compute(char operators[], int array[], int currIndex, int result, int numEq
 
   return (0);
 }
-                                   
+                                                                                                                                                                                                                                                                                                                                     CPSC170/Homework/aggarren-Homework3/Homework3.txt                                                   0000640 0014416 0014416 00000002613 14201475735 022064  0                                                                                                    ustar   aggarren                        aggarren                                                                                                                                                                                                               Test Cases
