@@ -1,0 +1,16 @@
+Test Cases:
+
+Case 1:
+Input:3 , 5
+Output:1
+Explanation:There are no common factors between 3 and 5 so the program should return 1
+
+Case 2:
+Input:4 , 8
+Output:1
+Explanation:There are two common factors between 4 and 8, 2 and 4, but they are not prime so the program should return 1
+
+Case 3:
+Input:15 , 45
+Output:15
+Explanation: There are two common prime factors between 15 and 45, 3 and 5 so the program should return 15
