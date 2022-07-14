@@ -1,0 +1,29 @@
+Test Cases
+
+Case 1:
+Input:holds doves
+Output: holds
+	doves
+	-^  ^
+Explanation:tests matching but not same place through 'd' and tests matching and same place through 'o' and 's'. In addition, tests to make sure last character is checked through 's'
+
+Case 2:
+Input:eagle works
+Output: eagle
+	works
+	
+Explanation: Tests for output if there are no matching characters
+
+Case 3:
+Input: abcde edcba
+Output: abcde
+	edzba
+	-----
+Explanation: Tests for output if all are matching but are not in the same place
+
+Case 4:
+Input: pizza pizza
+Output: pizza
+	pizza
+	^^^^^
+Explanation: Tests for output if all are matching and in the same place
