@@ -1,0 +1,39 @@
+Case 1
+Input: +* 12 2
+Output example: 1+5*2=12 2+2*3=12
+Explanation: tests to ensure a combination of a + and * outputs correctly and that two combinations are returned
+
+Case 2
+Input: *+ 17 3
+Output example: 2*4+9=17 5*2+7=17 2*7+3=17
+Explanation: tests to ensure the reverse of the above combination also outputs correctly and that three combinations are returned
+
+Case 3
+Input: /- 1 2
+Output example: 3/1-2=1 6/2-2=1
+Explanation: tests to ensure a combination of a / and - outputs correctly and that two combinations are returned
+
+Case 4
+Input: -/ 3 1
+Output example: 9-3/2=3
+Explanation: tests to ensure the reverse of the above combination also outputs correctly and that one combination is returned
+
+Case 5
+Input: +/ 2 1
+Output example: 6+4/5=2
+Explanation: tests to ensure a combination of + and / outputs correctly and that one combination is returned
+
+Case 6
+Input: /+ 8 1
+Output example: 9/3+5 = 8
+Explanation: tests to ensure the reverse of the above combination also outputs correctly and that one combination is returned
+
+Case 7
+Input: *- 80 2
+Output example: 9*9-1 = 80
+Explanation: tests to ensure the 1 combination of * and - outputs correctly and that a message saying there were not enough equations is also outputted
+
+Case 8
+Input: -* 9 1
+Output example: 5-4*9=9
+Explanation: tests to ensure the reverse of the above combination also outputs correctly and that one combination is returned
