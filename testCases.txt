@@ -1,0 +1,24 @@
+Case 1:
+Input: 1
+Output: Not a leap year
+Explanation: 1 is not divisible by 4
+
+Case 2:
+Input: 4
+Output: Leap year
+Explanation: 4 is divisible by 4
+
+Case 3:
+Input: 100
+Output: Not a leap year
+Explanation: 100 is divisible by 100 but not 400
+
+Case 4:
+Input: 200
+Output: Not a leap year
+Explanation: 200 is divisible by 100 but not 400
+
+Case 5:
+Input: 400
+Output: Not a leap year
+Explanation: 400 is divisible by 100 and 400
