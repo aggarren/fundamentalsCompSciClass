@@ -1,0 +1,46 @@
+Test Cases
+
+Case1
+Input: 2 1 10
+Output example: ++ 0 + 1 + 9 = 10
+       		. . .
+		** 1 * 2 * 5 = 10
+Explanation: tests for combinations of operators
+
+
+Case2
+Input: 2 2 -150
+Output example: ++ Not enough equation possibilities
+       		. . .
+		** Not enough equation possibilities
+Explanation: tests for several digits and not enough possibilities
+
+Case3
+Input: 3 1 -10 
+Output example: +++ Not enough equation possibilities
+       		. . .
+		*** Not enough equation possibilities
+Explanation: tests for negative answer and several operators 
+
+Case4:
+Input 3 3 300 
+Output example: +++ 0 + 0 + 0 + 300 = 300
+       		. . .
+		*** 0 * 0 * 1 * 300 = 300
+		*does load just takes a while be patient*
+Explanation: tests for several digits and several operators
+
+Case5:
+Input 4 2 0
+Output: ++++ 0 + 0 + 0 + 0 = 0
+	. . .
+	**** 0 * 0 * 0 * 0 = 0
+Explanation: tests to make sure that 4 operators work and that an answer of zero works
+
+Case6:
+Input 2 1 -2
+Output example: ++ Not enough equation possiblities
+       		. . .
+		** Not enough equation possibilities
+Explanation: tests for negative answer
+                                             
